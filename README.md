@@ -2,7 +2,7 @@
 This repository is used to store different Openfoam/Rheotool cases for viscoelastic simulations.  
 The implementations are compatible with Openfoam V7 and Rheotool of70.
 
-The **experiements** branch can be used to try out something or to build a new case, leading to a new branch with a corresponding name.
+**This branch** defines the 2D Newtonian 4:1 contraction with only wall BC.
 
 ## Directory structure
 `0/`  
