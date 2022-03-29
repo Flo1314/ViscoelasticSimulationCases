@@ -1,15 +1,28 @@
 # ViscoelasticSimulationCases
 This repository is used to store different Openfoam/Rheotool cases for viscoelastic simulations.
 
-The current base case is the 2D Newtonian 4:1 contraction.
+The current base case is the 2D Newtonian 4:1 contraction (to be extended in future).
 
-0/ contains the initial flow variables and field data
-constant/ contains (constitutive) properties such as the values for rho, eta and lambda
-system/ contians the mesh, timestep size, endtimestep, FV discretization schemes and solvers
+## Directory structure
+0/
+	p     - defines the dimension of p, its initial field values and boundary 		        conditions 
+	tau   - defines the dimension of tau, its initial field values and boundary 		        conditions
+	theta - defines the dimension of theta, its initial field values and boundary 		        conditions
+	U     - defines the dimension of U, its initial field values and boundary 		        conditions
 
-Use ./Allrun to start the whole simulation at once.
-Use ./Allclean, to remove all (from ./Allrun generated) data, to get a clean repository again.
-Use paraFoam to view the results in paraview.
-Use foamToVTK to generate VTK data files to store or share the data after computation.
+constant/ 
+	constitutiveProperties - defines dimension and values of rho, eta, etaP and 		                         lambda, a stabilization method for coulping and 
 
- 
+system/
+	blockMeshDict - defines the whole mesh and boundary conditions for different 	   	                patches
+	controlDict   - defines startTime, endTime, etc.
+	fvSchemes     - defines FV discretization schemes (ddt Schemes, grad Schemes, 		                div schemes, interpolation schemes etc.)
+	fvSolution    - defines system solvers (including maxiteration, tolerance), 		                preconditioner and coupling algorithms
+
+## Usefull commands
+./Allrun   - starts the whole simulation at once.
+./Allclean - removes all (from ./Allrun generated) data, to get a clean repository again.
+paraFoam   - opens results in paraview.
+foamToVTK  - generates VTK-files to easily store or share the data after computation.
+
+*all commands to be called from the toplevel directory.
