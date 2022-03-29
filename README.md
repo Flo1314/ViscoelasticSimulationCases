@@ -2,7 +2,7 @@
 This repository is used to store different Openfoam/Rheotool cases for viscoelastic simulations.  
 The implementations are compatible with Openfoam V7 and Rheotool of70.
 
-The current base case is the 2D Newtonian 4:1 contraction (to be extended in future).
+The main branch defines the 2D Newtonian 4:1 contraction with symmetric BC.
 
 ## Directory structure
 `0/`  
