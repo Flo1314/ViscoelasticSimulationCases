@@ -37,11 +37,6 @@ boundaryField
         value           uniform (0 0 0 0 0 0);
     }
 
-    symmetry
-    {
-        type             empty;
-    }
-
     frontAndBack
     {
         type             empty;

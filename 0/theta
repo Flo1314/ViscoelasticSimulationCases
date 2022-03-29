@@ -35,11 +35,6 @@ boundaryField
     {
         type            zeroGradient;
     }
-
-    symmetry
-    {
-        type             empty;
-    }
    
     frontAndBack
     {
