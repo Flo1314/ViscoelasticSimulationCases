@@ -26,12 +26,13 @@ boundaryField
         type            fixedValue;
         value           uniform (0 0 0 0 0 0 );
     }
-    "(wall.*)"
+   
+    outlet
     {
         type            zeroGradient;
     }
-   
-    outlet
+
+    "(wall.*)"
     {
         type            zeroGradient;
     }

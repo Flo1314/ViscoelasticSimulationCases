@@ -53,15 +53,25 @@ edges
 boundary
 (
 
-inlet
+     inlet
      {
-      type patch;
-      faces
-      (
+        type patch;
+        faces
+        (
             (0 8 11 3)
             (3 11 12 4)
         );
     }
+
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (7 6 14 15)
+        );
+    }
+
     walls
     {
         type wall;
@@ -70,15 +80,6 @@ inlet
             (0 1 9 8)
             (1 2 9 10)
             (2 7 15 10)
-        );
-    }
-  
-    outlet
-    {
-        type patch;
-        faces
-        (
-            (7 6 14 15)
         );
     }
   
