@@ -2,17 +2,17 @@
 This repository is used to store different Openfoam/Rheotool cases for viscoelastic simulations.  
 The implementations are compatible with Openfoam V7 and Rheotool of70.
 
-**This branch** defines the 2D Newtonian 4:1 contraction with symmetric bottom BC.
+**This branch** defines the 2D Newtonian 4:1 contraction with symmetric bottom BC and a higher resolution mesh.
 
 ## Directory structure
 `0/`  
-* p - defines the dimension of p, its initial field values and boundary conditions  
-* tau - defines the dimension of tau, its initial field values and boundary conditions
-* theta - defines the dimension of theta, its initial field values and boundary conditions  
-* U - defines the dimension of U, its initial field values and boundary conditions
+* p - defines the unit of p, its initial field values and boundary conditions  
+* tau - defines the unit of tau, its initial field values and boundary conditions
+* theta - defines the unit of theta, its initial field values and boundary conditions  
+* U - defines the unit of U, its initial field values and boundary conditions
 
 `constant/`  
-* constitutiveProperties - defines dimensions and values of rho, eta, etaP and  lambda and a stabilization method for coulping  
+* constitutiveProperties - defines units and values of rho, eta, etaP and  lambda and a stabilization method for coulping  
 
 `system/`  
 * blockMeshDict - defines the whole mesh and boundary conditions for different patches  
