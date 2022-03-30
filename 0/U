@@ -42,13 +42,7 @@ boundaryField
     bottom
     {
         type             symmetryPlane;
-    }
-
-    frontAndBack
-    {
-        type             empty;
-    }
-    
+    }    
 }
 
 // ************************************************************************* //
