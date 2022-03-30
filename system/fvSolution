@@ -18,7 +18,7 @@ solvers
 {
     p
     {
-        solver           PCG;
+        solver           PCG; // using asymmetric solver
         preconditioner   DIC;
         tolerance        1e-10;
         relTol           0;
@@ -27,31 +27,16 @@ solvers
         
     }
 
-    U
+    "(U|theta|tau|C)"
     {
 
-        solver           PBiCG;
+        solver           PBiCG; // using symmetric solver
         preconditioner
         {
             preconditioner DILU;
         }
 
-        tolerance         1e-8;
-        relTol            0;
-        minIter           1;
-        maxIter           1000;
-    }
-
-    "(theta|tau)"
-    {
-
-        solver           PBiCG;
-        preconditioner
-        {
-            preconditioner DILU;
-        }
-
-        tolerance         1e-12;
+        tolerance         1e-10;
         relTol            0;
         minIter           0;
         maxIter           1000;
@@ -85,6 +70,7 @@ relaxationFactors
         U 1;
         tau 1;
         theta 1;
+	C 1;
       }
 }
 

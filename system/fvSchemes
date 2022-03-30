@@ -24,7 +24,7 @@ gradSchemes
     default         Gauss linear;
     grad(p)         Gauss linear;
     grad(U)         Gauss linear;
-    linExtrapGrad       Gauss linear;      
+    linExtrapGrad   Gauss linear;      
     
 
 }
@@ -37,14 +37,16 @@ divSchemes
     div(phi,U)               GaussDefCmpw cubista;  
     div(phi,theta)           GaussDefCmpw cubista;
     div(phi,tau)             GaussDefCmpw cubista;
+    div(phi,C)               GaussDefCmpw cubista;
 }
 
 laplacianSchemes
 {
     default                       none;
-    laplacian(eta,U)              Gauss linear orthogonal;
-    laplacian(p|(ap-H1))          Gauss linear orthogonal;
-     
+    laplacian(eta,U)              Gauss linear corrected;
+    laplacian(p|(ap-H1))          Gauss linear corrected;
+    laplacian(D,C)                Gauss linear corrected;     
+
 }
 
 interpolationSchemes
@@ -55,7 +57,7 @@ interpolationSchemes
 
 snGradSchemes
 {
-    default         orthogonal;
+    default         corrected;
 }
 
 fluxRequired
