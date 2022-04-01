@@ -2,7 +2,7 @@
 This repository is used to store different Openfoam/Rheotool cases for viscoelastic simulations.  
 The implementations are compatible with Openfoam V7 and Rheotool of70.
 
-**This branch** defines the 2D Non-Newtonian (based on log Oldroyd B) 4:1 contraction with symmetric bottom BC and a modified, higher resolution mesh.
+**This branch** defines the 2D Non-Newtonian (based on log Oldroyd B) 4:1 contraction V2 with symmetric bottom BC and a higher resolution mesh.
 
 ## Directory structure
 `0/`  
