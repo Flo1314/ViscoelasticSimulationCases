@@ -14,7 +14,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     rheoFoam;
+application     rheoFoam; /* Transient solver for pressure-driven, single-phase, laminar, isothermal flows. */
 
 startFrom       latestTime;
 
