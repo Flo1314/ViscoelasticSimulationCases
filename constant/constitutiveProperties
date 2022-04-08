@@ -18,10 +18,10 @@ parameters
 {               
                 type             Oldroyd-BLog;
 
-                rho              rho [1 -3 0 0 0 0 0] 1.0;
-                etaS             etaS [1 -1 -1 0 0 0 0] 0.1;
-                etaP             etaP [1 -1 -1 0 0 0 0] .99;               
-                lambda           lambda [0 0 1 0 0 0 0] 1.0;
+                rho              rho [1 -3 0 0 0 0 0] 1000.0; // 1000 kg/m² = 1 g/cm³
+                etaS             etaS [1 -1 -1 0 0 0 0] 18000.0;
+                etaP             etaP [1 -1 -1 0 0 0 0] 2000.0;               
+                lambda           lambda [0 0 1 0 0 0 0] 0.3;
 
                 stabilization    coupling;              
 }
