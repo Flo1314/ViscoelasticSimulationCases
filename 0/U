@@ -20,22 +20,44 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    left
+    inlet
     {
-        type cyclic;
-        neighbourPatch right;
+        type fixedValue;
+	value nonuniform List<vector>
+	20
+	(
+	(0.0975 0 0)
+	(0.2775 0 0)
+	(0.4375 0 0)
+	(0.5775 0 0)
+	(0.6975 0 0)
+	(0.7975 0 0)
+	(0.8775 0 0)
+	(0.9375 0 0)
+	(0.9775 0 0)
+	(0.9975 0 0)
+	(0.9975 0 0)
+	(0.9775 0 0)
+	(0.9375 0 0)
+	(0.8775 0 0)
+	(0.7975 0 0)
+	(0.6975 0 0)
+	(0.5775 0 0)
+	(0.4375 0 0)
+	(0.2775 0 0)
+	(0.0975 0 0)
+	);
     }
 
-    right
+    outlet
     {
-        type cyclic;
-	neighbourPatch left;
+        type zeroGradient;
     }
 
     walls
     {
         type            fixedValue;
-        value           uniform ( 0 0 0 );
+        value           uniform (0 0 0);
     }
 
     frontAndBack
