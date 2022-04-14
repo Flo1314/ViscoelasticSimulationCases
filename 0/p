@@ -16,22 +16,23 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0;
+internalField   uniform 1;
 
 boundaryField
 {
-    inlet
+    left
     {
-        type            zeroGradient;
+        type cyclic;
+        neighbourPatch right;
     }
-    
-    outlet
+
+    right
     {
-          type            fixedValue;
-          value           uniform 1020.0; //-> 1 bar
+        type cyclic;
+	neighbourPatch left;
     }
- 
-    "(wall.*)"
+
+    walls
     {
          type            zeroGradient;
      
@@ -41,6 +42,7 @@ boundaryField
     {
         type             empty;
     }
+
 }
 
 // ************************************************************************* //

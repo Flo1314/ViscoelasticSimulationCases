@@ -20,20 +20,19 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    inlet
+    left
     {
-   
-      type          fixedValue;
-      value         uniform (0.5 0 0);
-
-    }
-    
-    outlet
-    {
-        type            zeroGradient;
+        type cyclic;
+        neighbourPatch right;
     }
 
-    "(wall.*)"
+    right
+    {
+        type cyclic;
+	neighbourPatch left;
+    }
+
+    walls
     {
         type            fixedValue;
         value           uniform ( 0 0 0 );

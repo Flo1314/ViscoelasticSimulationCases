@@ -1,0 +1,13 @@
+// -*- C++ -*-
+
+#includeEtc "caseDicts/postProcessing/probes/probes.cfg"
+
+fields (U);
+probeLocations
+(
+    (0 0 0)
+);
+
+
+// ************************************************************************* //
+
