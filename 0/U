@@ -20,7 +20,7 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    inlet
+    inlet // parabolic inlet velocity via x = f(y) = -(y^2-100)/100 
     {
         type fixedValue;
 	value nonuniform List<vector>
